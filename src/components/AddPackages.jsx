@@ -7,7 +7,7 @@ const AddPackages = () => {
             "packageName":"",
             "price":"",
             "duration":""
-            }
+        }
     )
 
     const inputHandler = (event)=>{
