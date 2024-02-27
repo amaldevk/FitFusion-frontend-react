@@ -8,7 +8,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/viewtrainer' element={<ViewTrainers/>}/>
+          <Route path='/viewtrainers' element={<ViewTrainers/>}/>
         </Routes>
       </BrowserRouter>
     </div>
