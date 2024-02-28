@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const ViewTrainer = () => {
     const [data,setData] = new useState([])
     const getData=()=>{
-        axios.get("http://localhost:3006/api/trainer/viewtrainers").then(
+        axios.get("http://localhost:3005/api/trainer/viewtrainers").then(
             (response)=>{
                 setData(response.data)
             }

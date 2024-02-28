@@ -6,7 +6,8 @@ const AddPackages = () => {
         {
             "packageName":"",
             "price":"",
-            "duration":""
+            "duration":"",
+            "description":""
         }
     )
 
@@ -16,7 +17,7 @@ const AddPackages = () => {
 
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3006/api/packages/addpackage",input).then(
+        axios.post("http://localhost:3005/api/packages/addpackage",input).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status == "success") {
@@ -26,7 +27,8 @@ const AddPackages = () => {
                         {
                             "packageName":"",
                             "price":"",
-                            "duration":""
+                            "duration":"",
+                            "description":""
                         }
                     )
                     
@@ -37,7 +39,8 @@ const AddPackages = () => {
                         {
                             "packageName":"",
                             "price":"",
-                            "duration":""
+                            "duration":"",
+                            "description":""
                         }
                     )
                     
