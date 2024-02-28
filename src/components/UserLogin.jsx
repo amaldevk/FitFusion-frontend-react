@@ -59,7 +59,7 @@ const UserLogin = () => {
                                                 <button className="btn btn-primary" onClick={readValues}>LOGIN</button>
                                             </div>
                                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                                <center><a href="/signup" className="nav-link">New Users register here</a></center>
+                                                <center><Link to="/registeruser" className="nav-link">New Users register here</Link></center>
                                             </div>
                                         </div>
                                     </div>
