@@ -6,8 +6,9 @@ const UserLogin = () => {
     const navigate = useNavigate()
     const [input, setInput] = new useState(
         {
-            username: String,
-            password: String
+            username: "",
+            password: "",
+            paymentStatus:""
         }
     )
     const inputHandler = (event) => {
@@ -18,14 +19,15 @@ const UserLogin = () => {
         axios.post("http://localhost:3005/api/member/login", input).then(
             (response) => {
                 console.log(response.data)
-                if (response.data.status == "success") {
+                if (response.data.status == "success" && input.paymentStatus =="Success") {
                     alert("Successfully signed in")
                     sessionStorage.setItem("username", response.data.username)
                     navigate("/addpackage")
                     setInput(
                         {
-                            username: String,
-                            password: String
+                            username: "",
+                            password: "",
+                            paymentStatus:""
                         }
                     )
                 } else {
