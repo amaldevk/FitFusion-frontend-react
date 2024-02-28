@@ -37,24 +37,24 @@ const HomePage = () => {
                         <br></br>
                         <div className="row">
                             <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div class="card">
-                                    <img height={300} src="https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2020/11/bigstock-European-Caucasian-Athletic-Ma-237054937.jpg?fit=1600%2C1461&ssl=1" class="card-img-top" alt="..." />
+                                <div className="card">
+                                    <img height={300} src="https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2020/11/bigstock-European-Caucasian-Athletic-Ma-237054937.jpg?fit=1600%2C1461&ssl=1" className="card-img-top" alt="..." />
                                 </div>
                             </div>
                             <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div class="card text-center mb-3">
-                                    <div class="card-body">
-                                        <img height={130} src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/356881067/original/1ba8114c0b3bc4d0f5c8987b97b2ced51e528487/transform-your-lifestyle-inc-custom-nutrition-gym-plans-discipline-guidance.jpg" class="card-img-top" alt="..." />
-                                        <h5 class="card-title"><b>New User</b></h5>
-                                        <Link to="/registeruser" class="btn btn-primary">Register</Link>
-                                        <h5 class="card-title"><b>Existing User</b></h5>
-                                        <Link to="/userlogin" class="btn btn-primary">Log In</Link>
+                                <div className="card text-center mb-3">
+                                    <div className="card-body">
+                                        <img height={130} src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/356881067/original/1ba8114c0b3bc4d0f5c8987b97b2ced51e528487/transform-your-lifestyle-inc-custom-nutrition-gym-plans-discipline-guidance.jpg" className="card-img-top" alt="..." />
+                                        <h5 className="card-title"><b>New User</b></h5>
+                                        <Link to="/registeruser" className="btn btn-primary">Register</Link>
+                                        <h5 className="card-title"><b>Existing User</b></h5>
+                                        <Link to="/userlogin" className="btn btn-primary">Log In</Link>
                                     </div>
                                 </div>
                             </div>
                             <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div class="card">
-                                    <img height={300} src="https://cdn.shopify.com/s/files/1/1633/7705/files/full_body_gym_workout_plan_for_women_480x480.jpg?v=1689684205" class="card-img-top" alt="..." />
+                                <div className="card">
+                                    <img height={300} src="https://cdn.shopify.com/s/files/1/1633/7705/files/full_body_gym_workout_plan_for_women_480x480.jpg?v=1689684205" className="card-img-top" alt="..." />
                                 </div>
                             </div>
                         </div>
