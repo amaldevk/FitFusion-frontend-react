@@ -4,6 +4,7 @@ import HomePage from './components/HomePage';
 import AdminLogin from './components/AdminLogin';
 import UserLogin from './components/UserLogin';
 import RegisterPage from './components/RegisterPage';
+import RegisteredApproval from './components/RegisteredApproval';
    
 
 
@@ -12,10 +13,9 @@ function App() {
     <div>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/adminlogin' element={<AdminLogin/>}/>
-        <Route path='/userlogin' element={<UserLogin/>}/>
+        
         <Route path='/registeruser' element={<RegisterPage/>}/>
+        <Route path='/' element={<RegisteredApproval/>}/>
       </Routes>
       </BrowserRouter>
     </div>
