@@ -127,7 +127,7 @@ const RegisterPage = () => {
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Payment Status</label>
-                                <input type="text" className="form-control" name='paymentStatus' value={"pending"} onChange={inputHandler} />
+                                <input class="form-control" type="text" name='paymentStatus' value={input.paymentStatus} onChange={inputHandler} placeholder="pending" aria-label="Disabled input example" disabled/>
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <button className="btn btn-success" onClick={readvalues}>Register</button>

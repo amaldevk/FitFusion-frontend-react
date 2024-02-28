@@ -2,33 +2,33 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function RegisteredApproval() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([])
 
   useEffect(() => {
     // Fetch registered members when the component mounts
-    fetchRegisteredMembers();
-  }, []);
+    fetchRegisteredMembers()
+  }, [])
 
   const fetchRegisteredMembers = async () => {
     try {
-      const response = await axios.get('http://localhost:3006/api/admin/viewregistered');
-      setMembers(response.data);
+      const response = await axios.get('http://localhost:3006/api/admin/viewregistered')
+      setMembers(response.data)
     } catch (error) {
-      console.error('Error fetching registered members:', error);
+      console.error('Error fetching registered members:', error)
       // Handle error, maybe show an error message to the user
     }
-  };
+  }
 
   const handleUpdatePaymentStatus = async (id, updatedData) => {
     try {
-      await axios.post('http://localhost:3006/api/admin/update', { id, ...updatedData });
+      await axios.post('http://localhost:3006/api/admin/update', { id, ...updatedData })
       // Assuming you want to refresh the list after updating a member's payment status
       fetchRegisteredMembers();
     } catch (error) {
-      console.error('Error updating payment status:', error);
+      console.error('Error updating payment status:', error)
       // Handle error, maybe show an error message to the user
     }
-  };
+  }
 
   return (
     <div>
@@ -60,7 +60,7 @@ function RegisteredApproval() {
                     <td>{member.paymentStatus}</td>
                     <td>
                         <button className="btn btn-info" onClick={() => handleUpdatePaymentStatus(member._id, { paymentStatus: 'Success' })}>
-                        Mark as Paid
+                        Approve
                         </button>
                         {/* Additional buttons/options for updating other member details */}
                     </td>

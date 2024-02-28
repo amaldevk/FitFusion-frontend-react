@@ -7,8 +7,7 @@ const UserLogin = () => {
     const [input, setInput] = new useState(
         {
             username: "",
-            password: "",
-            paymentStatus:""
+            password: ""
         }
     )
     const inputHandler = (event) => {
@@ -35,7 +34,20 @@ const UserLogin = () => {
                             
                         }
                     )
+                    
                     }
+                    else{
+                        alert("Registration Fee not paid")
+                        setInput(
+                            {
+                                username: "",
+                                password: "",
+                                
+                            }
+                        )
+                    }
+                    
+                    
                 }
 
                
