@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom/dist';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import UserNavbar from './components/UserNavbar';
+
 
 function App() {
   return (
