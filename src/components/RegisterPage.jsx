@@ -1,50 +1,51 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const RegisterPage = () => {
-    const [input,setInput]=new useState(
+    const [input, setInput] = new useState(
         {
-            "name":"",
-            "address":"",
-            "dateofbirth":"",
-            "age":"",
-            "contactno":"",
-            "emailid":"",
-            "gender":"",
-            "bloodgroup":"",
-            "height":"",
-            "weight":"",
-            "idproof":"",
-            "username":"",
-            "password":"",
-            "paymentStatus":"pending"
+            "name": "",
+            "address": "",
+            "dateofbirth": "",
+            "age": "",
+            "contactno": "",
+            "emailid": "",
+            "gender": "",
+            "bloodgroup": "",
+            "height": "",
+            "weight": "",
+            "idproof": "",
+            "username": "",
+            "password": "",
+            "paymentStatus": "pending"
         }
     )
-    const inputHandler=(event)=>{
-        setInput({...input,[event.target.name]:event.target.value})
+    const inputHandler = (event) => {
+        setInput({ ...input, [event.target.name]: event.target.value })
     }
-    const readvalues=()=>{
-        axios.post("http://localhost:3005/api/member/signup",input).then(
-            (response)=>{
-                if (response.data.status=="success") {
+    const readvalues = () => {
+        axios.post("http://localhost:3005/api/member/signup", input).then(
+            (response) => {
+                if (response.data.status == "success") {
                     alert("Registered successfully")
                     setInput(
                         {
-                            "name":"",
-                            "address":"",
-                            "dateofbirth":"",
-                            "age":"",
-                            "contactno":"",
-                            "emailid":"",
-                            "gender":"",
-                            "bloodgroup":"",
-                            "height":"",
-                            "weight":"",
-                            "idproof":"",
-                            "username":"",
-                            "password":"",
-                            "paymentStatus":"pending"
-                        }  
+                            "name": "",
+                            "address": "",
+                            "dateofbirth": "",
+                            "age": "",
+                            "contactno": "",
+                            "emailid": "",
+                            "gender": "",
+                            "bloodgroup": "",
+                            "height": "",
+                            "weight": "",
+                            "idproof": "",
+                            "username": "",
+                            "password": "",
+                            "paymentStatus": "pending"
+                        }
                     )
                 } else {
                     alert("something went wrong")
@@ -130,6 +131,7 @@ const RegisterPage = () => {
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <button className="btn btn-success" onClick={readvalues}>Register</button>
+                                <Link to="/" className="nav-link">Back to Home</Link>
                             </div>
                         </div>
                     </div>
