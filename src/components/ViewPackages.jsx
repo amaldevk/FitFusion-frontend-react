@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const ViewPackages = () => {
     const [data, setData] = useState([])
     const getData = () => {
-        axios.get("http://localhost:3005/api/packages/viewpackage").then(
+        axios.get("http://localhost:3006/api/packages/viewpackage").then(
             (response) => {
                 setData(response.data)
             }

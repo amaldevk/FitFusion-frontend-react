@@ -15,8 +15,7 @@ const AdminLogin = () => {
     const readValues = () => {
         console.log(input)
         if (input.username == "admin" && input.password == "admin") {
-            navigate("/viewregistered")
-            alert("Successfully signed in")
+            navigate("/approval")
             setInput({
                 "username": "",
                 "password": ""

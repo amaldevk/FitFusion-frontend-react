@@ -25,7 +25,7 @@ const RegisterPage = () => {
         setInput({ ...input, [event.target.name]: event.target.value })
     }
     const readvalues = () => {
-        axios.post("http://localhost:3005/api/member/signup", input).then(
+        axios.post("http://localhost:3006/api/member/signup", input).then(
             (response) => {
                 if (response.data.status == "success") {
                     alert("Registered successfully")
