@@ -15,7 +15,7 @@ const UserLogin = () => {
     }
     const readValues = () => {
         console.log(input)
-        axios.post("http://localhost:3006/api/member/login", input).then(
+        axios.post("http://localhost:3005/api/member/login", input).then(
             (response) => {
                 console.log(response.data)
                 if (response.data.status == "success") {
