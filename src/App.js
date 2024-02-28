@@ -11,13 +11,7 @@ import RegisteredApproval from './components/RegisteredApproval';
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <Routes>
-        
-        <Route path='/registeruser' element={<RegisterPage/>}/>
-        <Route path='/' element={<RegisteredApproval/>}/>
-      </Routes>
-      </BrowserRouter>
+      
     </div>
   );
 }
