@@ -16,7 +16,6 @@ const AdminLogin = () => {
         console.log(input)
         if (input.username == "admin" && input.password == "admin") {
             navigate("/approval")
-            alert("Successfully signed in")
             setInput({
                 "username": "",
                 "password": ""

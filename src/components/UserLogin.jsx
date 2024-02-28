@@ -16,22 +16,38 @@ const UserLogin = () => {
     }
     const readValues = () => {
         console.log(input)
-        axios.post("http://localhost:3005/api/member/login", input).then(
+        axios.post("http://localhost:3006/api/member/login", input).then(
             (response) => {
                 console.log(response.data)
-                if (response.data.status == "success" && input.paymentStatus =="Success") {
-                    alert("Successfully signed in")
-                    sessionStorage.setItem("username", response.data.username)
+                const {paymentStatus } = response.data;
+                if (response.data.status == "success") {
+                    
+                    if (paymentStatus === 'Success'){
+                
+                    
+                    console.log(response.data.userdata._id)
+                    sessionStorage.setItem("userId", response.data.userdata._id)
                     navigate("/addpackage")
                     setInput(
                         {
                             username: "",
                             password: "",
-                            paymentStatus:""
+                            
                         }
                     )
-                } else {
+                    }
+                }
+
+               
+                else {
                     alert("Something went wrong")
+                    setInput(
+                        {
+                            username: "",
+                            password: "",
+                            
+                        }
+                    )
                 }
             }
 

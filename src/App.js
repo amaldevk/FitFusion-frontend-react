@@ -6,6 +6,7 @@ import UserLogin from './components/UserLogin';
 import RegisterPage from './components/RegisterPage';
 import RegisteredApproval from './components/RegisteredApproval';
 import SearchMember from './components/SearchMember';
+import AddPackages from './components/AddPackages';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/registeruser' element={<RegisterPage/>}/>
         <Route path='/approval' element={<RegisteredApproval/>}/>
         <Route path='/search' element={<SearchMember/>}/>
+        <Route path='/addpackage' element={<AddPackages/>}/>
 
       </Routes>
       </BrowserRouter>
