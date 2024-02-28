@@ -15,7 +15,7 @@ const UserLogin = () => {
     }
     const readValues = () => {
         console.log(input)
-        axios.post("http://localhost:3006/api/member/login", input).then(
+        axios.post("http://localhost:3005/api/member/login", input).then(
             (response) => {
                 console.log(response.data)
                 if (response.data.status == "success") {
@@ -59,7 +59,8 @@ const UserLogin = () => {
                                                 <button className="btn btn-primary" onClick={readValues}>LOGIN</button>
                                             </div>
                                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                                <center><a href="/signup" className="nav-link">New Users register here</a></center>
+                                                <center><Link to="/registeruser" className="nav-link">New Users register here</Link></center><br></br>
+                                                <center><Link to="/" className="nav-link">Back to Home</Link></center>
                                             </div>
                                         </div>
                                     </div>
