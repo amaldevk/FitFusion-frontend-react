@@ -7,6 +7,10 @@ import RegisterPage from './components/RegisterPage';
 import RegisteredApproval from './components/RegisteredApproval';
 import SearchMember from './components/SearchMember';
 import AddPackages from './components/AddPackages';
+import UserHomepage from './components/UserHomepage';
+import ViewPackages from './components/ViewPackages';
+import ViewTrainer from './components/ViewTrainer';
+import AddTrainerDetails from './components/AddTrainerDetails';
 
 
 
@@ -23,7 +27,12 @@ function App() {
         <Route path='/registeruser' element={<RegisterPage/>}/>
         <Route path='/approval' element={<RegisteredApproval/>}/>
         <Route path='/search' element={<SearchMember/>}/>
+        <Route path='/userhome' element={<UserHomepage/>}/>
         <Route path='/addpackage' element={<AddPackages/>}/>
+        <Route path='/addtrainer' element={<AddTrainerDetails/>}/>
+        <Route path='/viewpackage' element={<ViewPackages/>}/>
+        <Route path='/viewtrainer' element={<ViewTrainer/>}/>
+        <Route path='/searchmember' element={<SearchMember/>}/>
 
       </Routes>
       </BrowserRouter>

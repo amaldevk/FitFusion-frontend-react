@@ -29,7 +29,7 @@ const UserNavbar = () => {
                                 <Link class="nav-link" to="/profile">Profile</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/logout">Logout</Link>
+                                <Link class="nav-link" to="/userlogin">Logout</Link>
                             </li>
                         </ul>
                     </div>

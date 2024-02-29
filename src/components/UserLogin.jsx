@@ -26,7 +26,7 @@ const UserLogin = () => {
                     
                     console.log(response.data.userdata._id)
                     sessionStorage.setItem("userId", response.data.userdata._id)
-                    navigate("/")
+                    navigate("/userhome")
                     setInput(
                         {
                             username: "",
