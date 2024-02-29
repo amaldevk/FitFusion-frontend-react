@@ -24,7 +24,7 @@ const AdminHomepage = () => {
                                         <div class="carousel-item active">
                                             <img src="https://images.pexels.com/photos/3757941/pexels-photo-3757941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="d-block w-100" alt="..." />
                                             <div class="carousel-caption d-none d-md-block">
-                                                <h5><a href="/approval" type="button" class="btn btn-primary">View Users</a></h5>
+                                                <h5><Link to="/approval" type="button" class="btn btn-primary">View Users</Link></h5>
                                             </div>
                                         </div>
                                     </div>

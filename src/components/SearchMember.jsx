@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import NavbarAdmin from './NavbarAdmin';
-import { Link } from 'react-router-dom';
 
 const SearchMember = () => {
     const [input, setInput] = useState({ name: "" });
@@ -83,7 +82,6 @@ const SearchMember = () => {
                             </tbody>
                         </table>
                     </div>
-                    <Link class="nav-link active" aria-current="page" to="/adminhome">Back</Link>
                 </div>
             </div>
         </div>
