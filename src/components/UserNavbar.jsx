@@ -26,7 +26,7 @@ const UserNavbar = () => {
                                 <Link class="nav-link" to="/contact">Contact Us</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/profile">Profile</Link>
+                                <Link class="nav-link" to="/myprofile">Profile</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to="/userlogin">Logout</Link>
