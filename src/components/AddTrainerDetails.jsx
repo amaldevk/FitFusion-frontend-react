@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavbarAdmin from './NavbarAdmin'
+import { Link } from 'react-router-dom'
 
 const AddTrainerDetails = () => {
     const [input,setInput] = new useState(
@@ -49,6 +51,8 @@ const AddTrainerDetails = () => {
     }
   return (
     <div>
+
+        <NavbarAdmin/>
         <div className="container">
         <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Register Trainer</h2>
         <br />
@@ -83,6 +87,7 @@ const AddTrainerDetails = () => {
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                             <button className="btn btn-info" onClick={readValues}>ADD</button>
                         </div>
+                        <Link to="/adminhome" class="btn btn-primary">Back</Link>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavbarAdmin from './NavbarAdmin'
 
 const AddPackages = () => {
     const [input,setInput] = new useState(
@@ -52,6 +53,8 @@ const AddPackages = () => {
 
   return (
     <div>
+
+        <NavbarAdmin/>
         <br />
         <br />
 
@@ -69,6 +72,12 @@ const AddPackages = () => {
 
                             <label htmlFor="" className="form-label">Price</label>
                             <input type="text" className="form-control" name="price" value={input.price} onChange={inputHandler}/>
+
+                        </div>
+                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                            <label htmlFor="" className="form-label">Description</label>
+                            <input type="text" className="form-control" name="description" value={input.description} onChange={inputHandler} />
 
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">

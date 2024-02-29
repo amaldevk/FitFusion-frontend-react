@@ -1,5 +1,6 @@
 import React from 'react'
 import NavbarAdmin from './NavbarAdmin'
+import { Link } from 'react-router-dom'
 
 const AdminHomepage = () => {
     return (
@@ -36,13 +37,13 @@ const AdminHomepage = () => {
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="card text-center">
                                     <h5 class="card-title">NEW PACKAGES</h5>
-                                    <a href="/addpackage" class="btn btn-primary">ADD</a>
+                                    <Link to="/addpackage" class="btn btn-primary">ADD</Link>
                             </div>
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                         <div class="card text-center">
                                     <h5 class="card-title">VIEW PACKAGES</h5>
-                                    <a href="/viewpackage" class="btn btn-primary">VIEW</a>
+                                    <Link to="/viewpackage" class="btn btn-primary">VIEW</Link>
                             </div>
                             </div>
                             <center><i><b><h3><div class="text-bg-warning p-3">TRAINERS</div></h3></b></i></center>
@@ -50,13 +51,13 @@ const AdminHomepage = () => {
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                 <div class="card text-center">
                                     <h5 class="card-title">NEW TRAINERS</h5>
-                                    <a href="/addtrainer" class="btn btn-primary">ADD</a>
+                                    <Link to="/addtrainer" class="btn btn-primary">ADD</Link>
                             </div>
                                 </div>
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <div class="card text-center">
                                             <h5 class="card-title">VIEW TRAINERS</h5>
-                                            <a href="/viewtrainer" class="btn btn-primary">VIEW</a>
+                                            <Link to="/viewtrainer" class="btn btn-primary">VIEW</Link>
                                         </div>
                                     </div>
                             </div>
