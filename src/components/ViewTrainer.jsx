@@ -1,10 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavbarAdmin from './NavbarAdmin'
 
 const ViewTrainer = () => {
     const [data,setData] = new useState([])
     const getData=()=>{
-        axios.get("http://localhost:3005/api/trainer/viewtrainers").then(
+        axios.get("http://localhost:3006/api/trainer/viewtrainers").then(
             (response)=>{
                 setData(response.data)
             }
@@ -13,6 +14,9 @@ const ViewTrainer = () => {
     useEffect(()=>{getData()},[])
   return (
     <div>
+
+        <NavbarAdmin/>
+        <br />
         <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">

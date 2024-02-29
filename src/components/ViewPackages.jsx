@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NavbarAdmin from './NavbarAdmin'
+import { Link } from 'react-router-dom'
 
 const ViewPackages = () => {
     const [data, setData] = useState([])
@@ -13,6 +15,8 @@ const ViewPackages = () => {
     useEffect(() => { getData() }, [])
     return (
         <div>
+
+            <NavbarAdmin/>
             <div className="container">
                 <div className="row">
                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -31,9 +35,10 @@ const ViewPackages = () => {
                                                     <p class="card-text">Price:{value.price}</p>
                                                     <p class="card-text">Duration:{value.duration}</p>
                                                     <p class="card-text">Description:{value.description}</p>
-                                                    <a href="#" className="btn btn-primary">Subscribe</a>
+                                                    <Link to="#" className="btn btn-primary">Subscribe</Link>
                                                     
                                                 </div>
+                                                <Link to="/adminhome" class="btn btn-primary">Back</Link>
                                             </div>
 
                                         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavbarAdmin from './NavbarAdmin';
 
 function RegisteredApproval() {
   const [members, setMembers] = useState([])
@@ -33,12 +34,15 @@ function RegisteredApproval() {
   return (
     <div>
 
+      <NavbarAdmin/>
+      <br />
+
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     
-                <h2>Registered Members</h2>
+                <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Registered Members</h2>
                 <table class="table table-bordered">
                 <thead>
                 <tr>
