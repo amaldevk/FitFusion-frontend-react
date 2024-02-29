@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavbarHome from './NavbarHome'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 const HomePage = () => {
+    const [data, setData] = useState([])
+    const getData = () => {
+        axios.get("http://localhost:3006/api/packages/viewpackage").then(
+            (response) => {
+                setData(response.data)
+            }
+        )
+    }
+    useEffect(() => { getData() }, [])
     return (
         <div>
             <NavbarHome />
@@ -60,61 +70,24 @@ const HomePage = () => {
                         </div>
                         <br></br>
                         <div className="row g-3">
-                        <center><b><h1>Packages</h1></b></center>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3">
-                                    <div className="card-header">Basic</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">30 days</h5>
-                                        <p className="card-text">500/-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3" >
-                                    <div className="card-header">Bronze</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">60 days</h5>
-                                        <p className="card-text">1000/-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3" >
-                                    <div className="card-header">Silver</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">90 days</h5>
-                                        <p className="card-text">1500/-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3" >
-                                    <div className="card-header">Gold</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">120 days</h5>
-                                        <p className="card-text">2000/-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3" >
-                                    <div className="card-header">Platinum</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">180 days</h5>
-                                        <p className="card-text">3000/-</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card text-bg-warning mb-3" >
-                                    <div className="card-header">Diamond</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">360 days</h5>
-                                        <p className="card-text">6000/-</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <center><b><h1>Packages</h1></b></center>
+                            {
+                                data.map(
+                                    (value, index) => {
+                                        return <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex">
+                                            <div className="card text-bg-light mb-3">
+                                                <img src="https://media.istockphoto.com/id/506479162/vector/silhouettes-athletes-bodybuilding.jpg?s=612x612&w=0&k=20&c=8pt9sBeFfzqr24nEQVc3WdTwx7qulZohy3ZTSD_PaMM=" class="card-img-top" alt="..." />
+                                                <div className="card-header"><b>{value.packageName}</b></div>
+                                                <div className="card-body">
+                                                    <p className="card-text">{value.description}</p>
+                                                    <h5 className="card-title">{value.duration}</h5>
+                                                    <h5 className="card-title">{value.price}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                )
+                            }
                         </div>
                     </div>
                 </div>
