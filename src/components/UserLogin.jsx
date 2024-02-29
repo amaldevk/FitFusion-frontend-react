@@ -36,8 +36,9 @@ const UserLogin = () => {
         <center>
             <div class="bg-secondary p-3">
             <div>
-                
+            <div class="login">
                     <div class="card">
+                        
                         <div className="container">
                             <div className="row g-3">
                                     <div class="card-body">
@@ -59,6 +60,7 @@ const UserLogin = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                             </div>
                         </div>
