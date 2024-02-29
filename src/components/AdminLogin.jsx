@@ -15,7 +15,7 @@ const AdminLogin = () => {
     const readValues = () => {
         console.log(input)
         if (input.username == "admin" && input.password == "admin") {
-            navigate("/approval")
+            navigate("/adminhome")
             setInput({
                 "username": "",
                 "password": ""
@@ -34,7 +34,7 @@ const AdminLogin = () => {
     return (
         <div><center>
             <div class="bg-secondary p-3">
-                <div class="card">
+                <div class="cardlogin">
                     <div className="container">
                         <div className="row g-3">
                             <div class="card-body">

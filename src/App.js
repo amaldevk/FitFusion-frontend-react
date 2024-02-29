@@ -11,6 +11,8 @@ import UserHomepage from './components/UserHomepage';
 import ViewPackages from './components/ViewPackages';
 import ViewTrainer from './components/ViewTrainer';
 import AddTrainerDetails from './components/AddTrainerDetails';
+import AdminHomepage from './components/AdminHomepage';
+import NavbarAdmin from './components/NavbarAdmin';
 
 
 
@@ -33,7 +35,7 @@ function App() {
         <Route path='/viewpackage' element={<ViewPackages/>}/>
         <Route path='/viewtrainer' element={<ViewTrainer/>}/>
         <Route path='/searchmember' element={<SearchMember/>}/>
-
+        <Route path='/adminhome' element={<AdminHomepage/>}/>
       </Routes>
       </BrowserRouter>
 
