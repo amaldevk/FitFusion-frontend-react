@@ -24,7 +24,7 @@ function RegisteredApproval() {
     try {
       await axios.post('http://localhost:3006/api/admin/update', { id, ...updatedData })
       // Assuming you want to refresh the list after updating a member's payment status
-      fetchRegisteredMembers();
+      fetchRegisteredMembers()
     } catch (error) {
       console.error('Error updating payment status:', error)
       // Handle error, maybe show an error message to the user
