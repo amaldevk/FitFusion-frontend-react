@@ -15,6 +15,7 @@ import AdminHomepage from './components/AdminHomepage';
 import NavbarAdmin from './components/NavbarAdmin';
 import AboutPage from './components/AboutPage';
 import MyProfile from './components/MyProfile';
+import ContactPage from './components/ContactPage';
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/adminhome' element={<AdminHomepage/>}/>
         <Route path='/about' element={<AboutPage/>}/>
         <Route path='/myprofile' element={<MyProfile/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
       </BrowserRouter>
 

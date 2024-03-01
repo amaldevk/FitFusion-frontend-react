@@ -53,7 +53,8 @@ const AdminLogin = () => {
                                             <button className="btn btn-primary" onClick={readValues}>LOGIN</button>
                                         </div>
                                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                            <center><Link to="/userlogin" className="nav-link">Users Click Here</Link></center>
+                                            <center><Link to="/userlogin" className="nav-link">Users Click Here</Link></center><br></br>
+                                            <center><Link to="/" className="nav-link">Back to Home</Link></center>
                                         </div>
                                     </div>
                                 </div>
