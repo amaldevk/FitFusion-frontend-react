@@ -31,13 +31,24 @@ function RegisteredApproval() {
     }
   }
 
+  const handleDelete = async (id) => {
+    try {
+      await axios.post('http://localhost:3006/api/admin/delete', { id })
+      // Assuming you want to refresh the list after updating a member's payment status
+      fetchRegisteredMembers();
+    } catch (error) {
+      console.error('Error updating payment status:', error)
+      // Handle error, maybe show an error message to the user
+    }
+  }
+
   return (
     <div>
 
       <NavbarAdmin/>
       <br />
 
-        <div className="container">
+        <div className="container ">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
@@ -63,10 +74,10 @@ function RegisteredApproval() {
                     {/* Render other member details */}
                     <td>{member.paymentStatus}</td>
                     <td>
-                        <button className="btn btn-info" onClick={() => handleUpdatePaymentStatus(member._id, { paymentStatus: 'Success' })}>
+                        <button className="btn btn-info mx-2" onClick={() => handleUpdatePaymentStatus(member._id, { paymentStatus: 'Success' })}>
                         Approve
-                        </button>
-                        {/* Additional buttons/options for updating other member details */}
+                        </button> 
+                        <button className="btn btn-danger mx-2" onClick={()=> handleDelete(member._id)}>Delete</button>
                     </td>
                     </tr>
                 ))}
