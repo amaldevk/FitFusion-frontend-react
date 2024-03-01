@@ -34,7 +34,8 @@ const AdminLogin = () => {
     return (
         <div><center>
             <div class="bg-secondary p-3">
-                <div class="cardlogin">
+            <div class="login">
+                <div class="card">
                     <div className="container">
                         <div className="row g-3">
                             <div class="card-body">
@@ -61,6 +62,7 @@ const AdminLogin = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </center></div>
     )
