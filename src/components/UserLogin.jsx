@@ -29,7 +29,7 @@ const UserLogin = () => {
                     navigate("/userhome")
                     setInput(
                         {
-                            username: "",
+                            emailid: "",
                             password: "",
                             
                         }
@@ -40,7 +40,7 @@ const UserLogin = () => {
                         alert("Registration Fee not paid")
                         setInput(
                             {
-                                username: "",
+                                emailid: "",
                                 password: "",
                                 
                             }
@@ -55,7 +55,7 @@ const UserLogin = () => {
                     alert("Something went wrong")
                     setInput(
                         {
-                            username: "",
+                            emailid: "",
                             password: "",
                             
                         }
@@ -67,10 +67,10 @@ const UserLogin = () => {
     }
     return (
         <center>
-            <div class="bg-secondary p-3">
+            <div class="background">
                 <div>
-
-                    <div class="cardlogin">
+                    <div class="login">
+                    <div class="card">
                         <div className="container">
                             <div className="row g-3">
                                 <div class="card-body">
@@ -78,8 +78,8 @@ const UserLogin = () => {
                                     <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
                                         <div className="row g-3">
                                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                                <label htmlFor="" className="form-label">USERNAME</label>
-                                                <input type="text" className="form-control" name="username" value={input.username} onChange={inputHandler} />
+                                                <label htmlFor="" className="form-label">EMAIL-ID</label>
+                                                <input type="text" className="form-control" name="emailid" value={input.emailid} onChange={inputHandler} />
                                             </div>
                                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                                 <label htmlFor="" className="form-label">PASSWORD</label>
@@ -99,6 +99,7 @@ const UserLogin = () => {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </center>
     )
