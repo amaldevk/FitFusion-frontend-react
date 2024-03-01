@@ -33,7 +33,7 @@ const AdminLogin = () => {
     }
     return (
         <div><center>
-            <div class="bg-secondary p-3">
+            <div class="background">
             <div class="login">
                 <div class="card">
                     <div className="container">
