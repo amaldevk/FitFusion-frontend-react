@@ -1,5 +1,6 @@
 import React from 'react'
 import UserNavbar from './UserNavbar'
+import { Link } from 'react-router-dom'
 const UserHomepage = () => {
   return (
     <div>
@@ -49,65 +50,13 @@ const UserHomepage = () => {
                         <div className="row g-3">
                         <center><b><h1>Packages</h1></b></center>
                             <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card">
-                                    <div className="card-header">Basic</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">30 days</h5>
-                                        <p className="card-text">500/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
+                            <div class="card text-center">
+                                    <h5 class="card-title">VIEW PACKAGES</h5>
+                                    <Link to="/viewpackage" class="btn btn-primary">VIEW</Link>
                             </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card">
-                                    <div className="card-header">Bronze</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">60 days</h5>
-                                        <p className="card-text">1000/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
                             </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card" >
-                                    <div className="card-header">Silver</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">90 days</h5>
-                                        <p className="card-text">1500/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card" >
-                                    <div className="card-header">Gold</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">120 days</h5>
-                                        <p className="card-text">2000/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card" >
-                                    <div className="card-header">Platinum</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">180 days</h5>
-                                        <p className="card-text">3000/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                                <div className="card" >
-                                    <div className="card-header">Diamond</div>
-                                    <div className="card-body">
-                                        <h5 className="card-title">360 days</h5>
-                                        <p className="card-text">6000/-</p>
-                                        <a href="#" className="btn btn-primary">Add</a>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>
