@@ -3,15 +3,32 @@ import UserNavbar from './UserNavbar'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 const UserHomepage = () => {
-    const [data, setData] = useState([])
-    const getData = () => {
-        axios.get("http://localhost:3006/api/packages/viewpackage").then(
-            (response) => {
-                setData(response.data)
+        const [packages, setPackages] = useState([]);
+        const userId = sessionStorage.getItem('userId');
+    
+        useEffect(() => {
+            const fetchPackages = async () => {
+                try {
+                    const response = await axios.get('http://localhost:3006/api/packages/viewpackage');
+                    setPackages(response.data);
+                } catch (error) {
+                    console.error('Error fetching packages:', error);
+                }
+            };
+    
+            fetchPackages();
+        }, []);
+    
+        const handleSelectPackage = async (packageId) => {
+            try {
+                await axios.post('http://localhost:3006/api/subscription/select', { userId, packageId });
+                alert('Package selected successfully');
+            } catch (error) {
+                console.error('Error selecting package:', error);
             }
-        )
-    }
-    useEffect(() => { getData() }, [])
+        };
+
+    
   return (
     <div>
         <UserNavbar/>
@@ -59,24 +76,23 @@ const UserHomepage = () => {
                         <br></br>
                         <div className="row g-3">
                         <center><b><h1>Packages</h1></b></center>
-                        {
-                                data.map(
-                                    (value, index) => {
-                                        return <div className="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex">
-                                            <div className="card text-bg-light mb-3">
+                        {packages.map(value => (
+                                    <div key={value._id} className="col-md-4 mb-3">
+                                        <div className="card">
+                                            <div className="card-body">
+                                                
                                                 <img src="https://media.istockphoto.com/id/506479162/vector/silhouettes-athletes-bodybuilding.jpg?s=612x612&w=0&k=20&c=8pt9sBeFfzqr24nEQVc3WdTwx7qulZohy3ZTSD_PaMM=" class="card-img-top" alt="..." />
-                                                <div className="card-header"><b>{value.packageName}</b></div>
-                                                <div className="card-body">
-                                                    <p className="card-text">{value.description}</p>
-                                                    <h5 className="card-title">{value.duration}</h5>
-                                                    <h5 className="card-title">{value.price}</h5>
-                                                    <h5 className="card-title"><button className="btn btn-success">Add</button></h5>
-                                                </div>
+                                                <h5 className="card-title">{value.packageName}</h5>
+                                                <p className="card-text">{value.description}</p>
+                                                <h5 className="card-title">{value.duration}</h5>
+                                                <h5 className="card-title">{value.price}</h5>
+                                                {/* Add more details about the package as needed */}
+                                                <button onClick={() => handleSelectPackage(value._id)} className="btn btn-primary">Select</button>
                                             </div>
                                         </div>
-                                    }
-                                )
-                            }
+                                    </div>
+                                ))}
+                            
                             
                             
                         </div>
@@ -88,3 +104,4 @@ const UserHomepage = () => {
 }
 
 export default UserHomepage
+
