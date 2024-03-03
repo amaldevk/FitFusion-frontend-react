@@ -70,6 +70,7 @@ const UserHomepage = () => {
                                                     <p className="card-text">{value.description}</p>
                                                     <h5 className="card-title">{value.duration}</h5>
                                                     <h5 className="card-title">{value.price}</h5>
+                                                    <h5 className="card-title"><button className="btn btn-success">Add</button></h5>
                                                 </div>
                                             </div>
                                         </div>
