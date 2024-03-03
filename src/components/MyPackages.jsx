@@ -1,70 +1,65 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import UserNavbar from './UserNavbar'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import UserNavbar from './UserNavbar';
 
-const MyPackage = () => {
+const SelectedPackages = () => {
+    const [selectedPackages, setSelectedPackages] = useState([]);
+    const userId = sessionStorage.getItem('userId');
 
-    const [data,setData] = useState([])
-    const [input,setInput] = useState(
-        {
-            "userId":sessionStorage.getItem("userId")
-        }
-    )
-
-    const getData = ()=>{
-        console.log(input)
-        axios.post("http://localhost:3006/api/subscription/mysubscription",input).then(
-            (response)=>{
-                setData(response.data)
+    useEffect(() => {
+        const fetchSelectedPackages = async () => {
+            try {
+                const response = await axios.post('http://localhost:3006/api/subscription/selected', { userId });
+                setSelectedPackages(response.data);
+            } catch (error) {
+                console.error('Error fetching selected packages:', error);
             }
-        )
-    }
-    useEffect(()=>{getData()},[])
+        };
 
-    
+        if (userId) {
+            fetchSelectedPackages();
+        }
+    }, [userId]);
 
-  return (
-    <div>
+    return (
+        <div>
+            <UserNavbar/>
+            <br />
 
-        <UserNavbar/>
+            <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Selected Packages</h2>
 
-        <br />
-        <br />
+            <div className="container">
+                <div className="row">
+                    <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-        <div className="container">
-            <div className="row">
-                <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div className="row">
+                {selectedPackages.map(subscription => (
+                    <div key={subscription._id} className="col-md-4 mb-3">
+                        <div className="card">
+                            <div className="card-body">
+                                <h5 className="card-title">{subscription.packageId.packageName}</h5>
+                                <h6 className="card-title">Price : {subscription.packageId.price}</h6>
+                                <h6 className="card-title"> Duration : {subscription.packageId.duration}</h6>
+                                <h6 className="card-title">Description : {subscription.packageId.description}</h6>
+                                {/* Add more details about the package as needed */}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-                    <div className="row g-3">
-                        {
-                            data.map(
-                                (value,index)=>{
-                                    return <div className="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
 
-                                    <div class="card border-success mb-3">
-                                    <div class="card-header bg-transparent border-success"></div>
-                                    <div class="card-body text-success">
-                                        
-                                        <p class="card-text">Package Name : {value.packageId}</p>
-                                        <p class="card-text">Package Name : {value.packageId.price}</p>
-                                        <p class="card-text">Package Name : {value.packageId.duration}</p>
-                                        <p class="card-text">Package Name : {value.packageId.description}</p>
-                                        <p class="card-text">Subscription Date : {value.subscriptionDate}</p>
-                                        
-                                    </div>
-                                    <div class="card-footer bg-transparent border-success"></div>
-                                    </div>
-            
-                                    </div>
-                                }
-                            )
-                        }
                     </div>
                 </div>
             </div>
+            
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default MyPackage
+export default SelectedPackages;
+
+
+
+
+
