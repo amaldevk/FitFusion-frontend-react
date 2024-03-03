@@ -45,7 +45,7 @@ const MyPackage = () => {
                                     <div class="card-header bg-transparent border-success"></div>
                                     <div class="card-body text-success">
                                         
-                                        <p class="card-text">Package Name : {value.packageId.packageName}</p>
+                                        <p class="card-text">Package Name : {value.packageId}</p>
                                         <p class="card-text">Package Name : {value.packageId.price}</p>
                                         <p class="card-text">Package Name : {value.packageId.duration}</p>
                                         <p class="card-text">Package Name : {value.packageId.description}</p>
