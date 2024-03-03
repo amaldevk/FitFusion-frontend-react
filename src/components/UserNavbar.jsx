@@ -20,12 +20,6 @@ const UserNavbar = () => {
                                 <Link class="nav-link" to="/mypackage">My Package</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/gallery">Gallery</Link>
-                            </li>
-                            <li class="nav-item">
-                                <Link class="nav-link" to="/contact">Contact Us</Link>
-                            </li>
-                            <li class="nav-item">
                                 <Link class="nav-link" to="/profile">Profile</Link>
                             </li>
                             <li class="nav-item">
