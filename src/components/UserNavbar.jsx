@@ -14,7 +14,7 @@ const UserNavbar = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <Link class="nav-link active" aria-current="page" to="/userlogin">Home</Link>
+                                <Link class="nav-link active" aria-current="page" to="/userhome">Home</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link" to="/mypackage">My Package</Link>
