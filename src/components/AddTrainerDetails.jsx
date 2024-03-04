@@ -20,7 +20,7 @@ const AddTrainerDetails = () => {
 
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3005/api/trainer/addtrainer",input).then(
+        axios.post("http://localhost:3006/api/trainer/addtrainer",input).then(
             (response)=>{
                 console.log(response.data)
                 if (response.data.status == "success") {
