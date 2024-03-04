@@ -18,7 +18,7 @@ const RegisterPage = () => {
             "idproof": "",
             "username": "",
             "password": "",
-            "paymentStatus": "pending"
+            "paymentStatus": "100"
         }
     )
     const inputHandler = (event) => {
@@ -44,7 +44,7 @@ const RegisterPage = () => {
                             "idproof": "",
                             "username": "",
                             "password": "",
-                            "paymentStatus": "pending"
+                            "paymentStatus": "100"
                         }
                     )
                 } else {
@@ -126,8 +126,8 @@ const RegisterPage = () => {
                                 <input type="password" className="form-control" name='password' value={input.password} onChange={inputHandler} />
                             </div>
                             <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                <label htmlFor="" className="form-label">Payment Status</label>
-                                <input class="form-control" type="text" name='paymentStatus' value={input.paymentStatus} onChange={inputHandler} placeholder="pending" aria-label="Disabled input example" disabled/>
+                                <label htmlFor="" className="form-label">Registration Fee</label>
+                                <input class="form-control" type="text" name='paymentStatus' value={input.paymentStatus} onChange={inputHandler} placeholder="100" aria-label="Disabled input example" disabled/>
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <button className="btn btn-success" onClick={readvalues}>Register</button>
