@@ -38,8 +38,9 @@ const MyPackages = () => {
                                 <h5 className="card-title">{subscription.packageId.packageName}</h5>
                                 <h6 className="card-title">Price : {subscription.packageId.price}</h6>
                                 <h6 className="card-title">Duration : {subscription.packageId.duration}</h6>
-                                <h6 className="card-title">Description : {subscription.packageId.description}</h6>
-                                {/* Add more details about the package as needed */}
+                                <h6 className="card-title">Duration : {subscription.packageId.duration}</h6>
+                                <h6 className="card-title">Subscription Date : {subscription.subscriptionDate}</h6>
+                               
                             </div>
                         </div>
                     </div>
