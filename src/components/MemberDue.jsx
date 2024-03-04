@@ -23,12 +23,18 @@ const MemberDue = () => {
             <NavbarAdmin/>
             <br />
             <h2 style={{ textAlign: 'center', textDecoration: 'underline' }}>Due Details</h2>
-            <table className="table table-bordered">
+            <div className="container">
+                <div className="row">
+                    <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+
+                    <table className="table table-bordered">
                 <thead>
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Package Name</th>
+                        <th>Package Price</th>
                         <th>Due Amount</th>
                         <th>Remaining Days for Due</th>
                     </tr>
@@ -39,12 +45,19 @@ const MemberDue = () => {
                             <td>{subscription.name}</td>
                             <td>{subscription.emailid}</td>
                             <td>{subscription.packageName}</td>
+                            <td>{subscription.packagePrice}</td>
                             <td>{subscription.dueAmount}</td>
                             <td>{subscription.remainingDaysForDue}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+
+
+                    </div>
+                </div>
+            </div>
+            
         </div>
     );
 };
