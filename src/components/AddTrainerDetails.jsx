@@ -35,7 +35,7 @@ const AddTrainerDetails = () => {
                         }
                     )
                 } else {
-                    alert("error in addind trainers!")
+                    alert("error in adding trainers!")
                     setInput(
                         {
                             "name":"",
