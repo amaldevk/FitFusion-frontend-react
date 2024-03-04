@@ -23,6 +23,9 @@ const UserNavbar = () => {
                                 <Link class="nav-link" to="/myprofile">Profile</Link>
                             </li>
                             <li class="nav-item">
+                                <Link class="nav-link" to="/updatePackage">Update Package</Link>
+                            </li>
+                            <li class="nav-item">
                                 <Link class="nav-link" to="/">Logout</Link>
                             </li>
                         </ul>

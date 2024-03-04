@@ -17,6 +17,8 @@ import AboutPage from './components/AboutPage';
 import MyProfile from './components/MyProfile';
 import ContactPage from './components/ContactPage';
 import MyPackage from './components/MyPackages';
+import UpdatePackage from './components/UpdatePackage';
+import MemberDue from './components/MemberDue';
 
 
 
@@ -44,6 +46,8 @@ function App() {
         <Route path='/myprofile' element={<MyProfile/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
         <Route path='/mypackage' element={<MyPackage/>}/>
+        <Route path='/updatePackage' element={<UpdatePackage/>}/>
+        <Route path='/memberdue' element={<MemberDue/>}/>
       </Routes>
       </BrowserRouter>
 
