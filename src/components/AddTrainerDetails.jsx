@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const AddTrainerDetails = () => {
     const [input,setInput] = new useState(
         {
-            "Name":"",
+            "name":"",
             "gender":"",
             "phnno":"",
             "address":"",
@@ -27,7 +27,7 @@ const AddTrainerDetails = () => {
                     alert("Trainer Added")
                     setInput(
                         {
-                            "Name":"",
+                            "name":"",
                             "gender":"",
                             "phnno":"",
                             "address":"",
@@ -38,7 +38,7 @@ const AddTrainerDetails = () => {
                     alert("error in addind trainers!")
                     setInput(
                         {
-                            "Name":"",
+                            "name":"",
                             "gender":"",
                             "phnno":"",
                             "address":"",
@@ -62,11 +62,11 @@ const AddTrainerDetails = () => {
                     <div className="row g-3">
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <label htmlFor="" className="form-label">NAME</label>
-                            <input type="text" className="form-control" name="Name" value={input.Name} onChange={InputHandler}/>
+                            <input type="text" className="form-control" name="name" value={input.name} onChange={InputHandler}/>
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <label htmlFor="" className="form-label">GENDER</label>
-                            <select name="" id="" className="form-control" value={input.gender} onChange={InputHandler}>
+                            <select name="gender" id="" className="form-control" value={input.gender} onChange={InputHandler}>
                                 <option value="">Select Gender</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
