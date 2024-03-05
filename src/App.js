@@ -19,6 +19,7 @@ import ContactPage from './components/ContactPage';
 import MyPackage from './components/MyPackages';
 import UpdatePackage from './components/UpdatePackage';
 import MemberDue from './components/MemberDue';
+import ViewHistory from './components/ViewHistory';
 
 
 
@@ -48,6 +49,7 @@ function App() {
         <Route path='/mypackage' element={<MyPackage/>}/>
         <Route path='/updatePackage' element={<UpdatePackage/>}/>
         <Route path='/memberdue' element={<MemberDue/>}/>
+        <Route path='/viewhistory' element={<ViewHistory/>}/>
       </Routes>
       </BrowserRouter>
 
