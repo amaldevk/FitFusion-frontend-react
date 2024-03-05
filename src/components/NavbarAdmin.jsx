@@ -37,6 +37,9 @@ const NavbarAdmin = () => {
                                 <Link class="nav-link active" aria-current="page" to="/memberdue">Due</Link>
                             </li>
                             <li class="nav-item">
+                                <Link class="nav-link active" aria-current="page" to="/viewhistory">History</Link>
+                            </li>
+                            <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" to="/searchmember">Search</Link>
                             </li>
                             <li class="nav-item">
