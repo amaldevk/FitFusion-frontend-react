@@ -38,7 +38,7 @@ const UpdatePackage = () => {
         event.preventDefault();
 
         // Send a request to update the user's package
-        axios.post('http://localhost:3006/api/subscription/update', { userId, newPackageId })
+        axios.post('http://localhost:3006/api/subscription/update', { userId, newPackageId },{headers:{token:sessionStorage.getItem("token")}})
             .then(response => {
                 setMessage(response.data.message);
             })
