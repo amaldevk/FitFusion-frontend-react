@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -14,22 +15,23 @@ const AdminLogin = () => {
     }
     const readValues = () => {
         console.log(input)
-        if (input.username == "admin" && input.password == "admin") {
-            navigate("/adminhome")
-            setInput({
-                "username": "",
-                "password": ""
-            })
-        }
-        else {
-            alert("Invalid username or password")
-            setInput(
-                {
-                    "username": "",
-                    "password": ""
+        axios.post("http://localhost:3006/api/admin/adminlogin", input).then(
+            (response) => {
+                console.log(response.data)
+                if (response.data.status == "success") {
+                    alert("Successfully Signed In")
+                    navigate("/adminhome")
+                    setInput(
+                        {   
+                            username:String,
+                            password:String
+                        }
+                    )
+                } else {
+                    alert("Something went wrong")
                 }
-            )
-        }
+            }
+        )
     }
     return (
         <div><center>
