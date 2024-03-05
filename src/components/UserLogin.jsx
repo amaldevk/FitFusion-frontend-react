@@ -25,6 +25,7 @@ const UserLogin = () => {
                 
                     
                     console.log(response.data.userdata._id)
+                    sessionStorage.setItem("token",response.data.token)
                     sessionStorage.setItem("userId", response.data.userdata._id)
                     navigate("/userhome")
                     setInput(
