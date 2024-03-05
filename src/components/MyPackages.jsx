@@ -9,7 +9,7 @@ const MyPackages = () => {
     useEffect(() => {
         const fetchSelectedPackages = async () => {
             try {
-                const response = await axios.post('http://localhost:3006/api/subscription/selected', { userId });
+                const response = await axios.post('http://localhost:3006/api/subscription/selected', { userId },{headers:{token:sessionStorage.getItem("token")}});
                 setSelectedPackages(response.data);
             } catch (error) {
                 console.error('Error fetching selected packages:', error);
