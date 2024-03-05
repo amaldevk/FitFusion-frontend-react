@@ -9,7 +9,7 @@ const MyProfile = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post("http://localhost:3006/api/member/myprofile", { userId })
+                const response = await axios.post("http://localhost:3006/api/member/myprofile", { userId },{headers:{token:sessionStorage.getItem("token")}})
                 setProfileData(response.data)
             } catch (error) {
                 console.error('Error fetching user profile:', error)
