@@ -33,9 +33,9 @@ const NavbarAdmin = () => {
                                     <li><Link class="dropdown-item" to="/viewtrainer">View</Link></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            {/* <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" to="/memberdue">Due</Link>
-                            </li>
+                            </li> */}
                             <li class="nav-item">
                                 <Link class="nav-link active" aria-current="page" to="/viewhistory">History</Link>
                             </li>
