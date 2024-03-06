@@ -48,7 +48,8 @@ const ViewHistory = ()=> {
                             
                             <td>{entry.newPackageId.packageName}</td>
                             <td>Rs {entry.newPackageId.price}</td>
-                            
+                            <td>Rs {entry.payToAdmin}</td>
+                            <td>Rs {entry.refund}</td>
                             <td>{new Date(entry.updatedAt).toLocaleString()}</td>
                         </tr>
                     ))}
