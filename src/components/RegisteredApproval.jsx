@@ -74,7 +74,7 @@ function RegisteredApproval() {
                     {/* Render other member details */}
                     <td>{member.paymentStatus}</td>
                     <td>
-                        <button className="btn btn-info mx-2" onClick={() => handleUpdatePaymentStatus(member._id, { paymentStatus: 'Success' })}>
+                        <button className="btn btn-info mx-2" onClick={() => handleUpdatePaymentStatus(member._id, { paymentStatus: 'Paid' })}>
                         Approve
                         </button> 
                         <button className="btn btn-danger mx-2" onClick={()=> handleDelete(member._id)}>Delete</button>

@@ -19,7 +19,7 @@ const AdminLogin = () => {
             (response) => {
                 console.log(response.data)
                 if (response.data.status == "success") {
-                    alert("Successfully Signed In")
+                    
                     navigate("/adminhome")
                     console.log(response.data.username)
                     sessionStorage.setItem("token",response.data.token)

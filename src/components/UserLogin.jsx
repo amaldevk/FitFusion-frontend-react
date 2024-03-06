@@ -21,7 +21,7 @@ const UserLogin = () => {
                 const {paymentStatus } = response.data;
                 if (response.data.status == "success") {
                     
-                    if (paymentStatus === 'Success'){
+                    if (paymentStatus === 'Paid'){
                 
                     
                     console.log(response.data.userdata._id)
